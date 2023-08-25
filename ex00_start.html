@@ -4,9 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
 <body>
-    
+    <form>
+
+       <div class = result>클릭해봐</div>
+      
+      </form>
 
     <script>
         // HTML문서 위에 자바스크립트를 사용하기 위해서는 <script>선언
@@ -17,7 +22,29 @@
         // document : 현재html문서에
         // .        : 접근해서
         // write()  : 작성할거야
-        document.write("ㅁㄴㅇㄹ");
+        document.write("안녕하세요");
+
+        // 2.alter() : 알림 팝업창을 실행시키는 출력문
+        alert("팝업창 뛰운다");
+
+        // 3. 콘솔창의 log를 남길때 활용한다!
+        console.log("ㅎㅎㅎ")
+
+        //입력문
+        // 1.confirm() : 사용자에게 확인 or 취소를 입력받는 입력문
+        // 리턴타입이 boolean(true/false)
+        console.log(confirm("제출하시겠습니까?"))
+
+        //2.prompt() :사용자에게 직접 키보드 입력값을 받는 입력값
+        console.log(prompt("이름을 입력해주세요!"))
+        console.log(prompt("휴대폰 번호를 입력해주세요!"))
+        
+       
+        document.querySelector(".result").addEventListener("click",function(){
+            alert('클릭했다')
+            console.log("클릭했다")
+        })
+       
 
     </script>
 </body>

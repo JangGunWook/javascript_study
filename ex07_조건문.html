@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // 조건문 : if, else, else if, swich, case
+
+        
+        let ischangeed = confirm("비밀번호를 변경하시겠습니까?");
+
+        // 만약, 사용자가 '확인'을 눌렀다면~~
+        if(ischangeed==true){
+            alert("변경완료");
+        }else{
+            alert("변경실패");
+        }
+
+        let java = Number(prompt("점수를 입력하시오"));
+        let python = Number(prompt("점수를 입력하시오"));
+        let r = Number(prompt("점수를 입력하시오"));
+        
+        let avg = (java+python+r)/3;
+
+        if(avg>=90){
+            console.log(`당신의 평균은${avg}이고 A입니다`)
+        }else if(avg>=80){
+            console.log(`당신의 평균은${avg}이고 B입니다`)
+        }else if(avg>=70){
+            console.log(`당신의 평균은${avg}이고 C입니다`)
+        }else{
+            console.log(`당신의 평균은${avg}이고 F입니다`)
+        }
+
+
+
+    </script>
+</body>
+</html>
