@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="num">0</p>
+    <button id="btn-puls">증가</button>
+    <button id="btn-minus">감소</button>
+
+    <script>
+        let num = document.querySelector("#num")
+
+        let plus = document.querySelector("#btn-puls")
+        plus.addEventListener("click",function(){
+
+            
+            let i = Number(num.textContent)
+            i+=1;
+            num.textContent= i;
+        })
+
+        let minus = document.querySelector("#btn-minus")
+        minus.addEventListener("click",function(){
+
+            
+            let i = Number(num.textContent)
+            i-=1;
+
+            if(i<=0){
+                i=0;
+            }
+
+            num.textContent= i;
+        })
+
+
+    </script>
+</body>
+</html>

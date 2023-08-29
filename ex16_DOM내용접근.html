@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="msg">오늘의 문서객체모델에 대해 배워보았다</p>
+
+    <script>
+        let msg = document.getElementById("msg");
+        console.log(msg);
+
+        //html 태그와 같이 내용을 적용할 때 : innerHTML
+        // 택스트 내용만 적용할 때 : textContent
+
+
+        //p태그의 전체내용 접근
+        console.log(msg.innerHTML);
+
+        //p태그의 전체내용 변경
+        msg.innerHTML ="내용바꿨다 이놈아";
+        console.log(msg.innerHTML);
+
+        msg.innerHTML += "<span>이렇게</span>";
+
+        //p태그의 택스트 값 접근
+        console.log(msg.innerHTML);
+
+        //p태그의 택스트값 변경
+        msg.textContent="택스트값 바꿔보기";
+        msg.textContent="<span> + 택스트값 바꿔보기 + </span>";
+    </script>
+</body>
+</html>

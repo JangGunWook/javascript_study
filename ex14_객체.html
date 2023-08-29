@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // 객체
+        // 객체 지향 프로그래밍에서 데이터(속성)과
+        // 데이터에 관련되는 동작(절차, 기능)을 모두 포함한 개념
+        
+        //*객체의 구조*
+        // {key:value, key:value, ...}
+        // key : 객체의 property(속성) - 문자열로 표현
+        // value :  key의 값(기본자료형, 배열, 함수, 객체타입 데이터)
+
+        //(1) 내장객체
+        // -> 자바스크립트 엔진에 내장된 객체
+        // 날짜, 문자, 배열, 수학
+
+        //ex) 연도를 가져오는 객체
+        const moonLanding = new Date();
+        console.log(moonLanding.getFullYear())
+
+        //(2) 브라우저 객체(BOM, browser object model)
+        //블라우저에 내장된 객체
+        // alert(), console.log(),....
+        // window() : 브라우저 객체 중 최상위 객체, 브라우저에 관련된 기능
+        // window.open("http://www.naver.com","네이버 제공해드립니다~","width=500px;height=500px")
+
+        //(+) 문서객체 모델
+        // 웹문서를 제어할 수 있는 객체
+
+        //(3) 사용자 정의 객체
+        // 사용자가 직접만든 객체
+        // 자바스크립트 엔진이 구동되는 시점에 생성
+
+
+        // 사용자 정의 객체
+        let person = {
+            "name" : "miri",
+            "age" : 20,
+            "gender" : "여성",
+            "info" : function(){
+                console.log(this);
+            }
+        }
+
+        // person 객체를 출력하는 함수 실행하기
+        console.log(person.name)
+
+        person.info();
+        console.log(person);
+
+    </script>
+</body>
+</html>

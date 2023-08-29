@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="bb">DOM활용해보기</h1>
+    <button id="btn-h1">h1태그내용변경</button>
+    <button id="btn-a">a태그 생성</button>
+    <button id="btn-ul">ul태그 생성</button>
+
+    <div id="area"></div>
+
+    <script>
+       // 1. h1내용변경 버튼을 클릭하면 기존 h1태그의 내용이 "내용 잘 바뀌었다!" 로 바뀌게 하기"
+        // 2. a태그생성 버튼을 클릭하면 div에 [스마트인재개발원 사이트]로 이동하는 a태그 생성
+        // 3. ul태그생성 버튼을 클릭하면 div에  html,css,javascript를 담는 ul 리스트를 생성
+
+        let btn1 = document.querySelector("#btn-h1");
+        btn1.addEventListener("click",function(){
+            document.querySelector("h1").textContent = "내용 잘 바뀌었다!";
+        })
+
+
+        let btn2 = document.querySelector("#btn-a");
+        btn2.addEventListener("click",function(){
+            document.getElementById("area").innerHTML += "<a href=https://smhrd.or.kr>스마트인재개발원</a>"
+        })
+
+        let btn3 = document.querySelector("#btn-ul");
+        btn3.addEventListener("click",function(){
+            document.getElementById("area").innerHTML += 
+            `<ul>
+                <li>html</li>
+                <li>css</li>
+                <li>js</li>
+            </ul>`
+        })
+        
+
+    </script>
+</body>
+</html>
