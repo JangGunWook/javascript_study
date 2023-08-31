@@ -14,6 +14,13 @@
             <li class="item">JS</li>
         </ul>
 
+        <ul>
+            <li>asdf</li>
+            <li>sdsd</li>
+            <li>aaa</li>
+        </ul>
+
+
     <script>
         // DOM(문서객체 모델) : html 태그를 자바스크립트에서
         // 사용할 수 있도록 객체로 변환
@@ -31,9 +38,15 @@
         // doucument : 현재 HTML 문서에
         // .         : 접근해서
         // getElements : 요소를 가져올거야
-        /// ByClassName: "item"라는 class값을 가진
-        let items = document.getElementsByClassName("item");
+        /// ByClassName: "item"라는 class값을 가진 3번째("[2]") 값 호출
+        let items = document.getElementsByClassName("item")[2];
         console.log(items);
+
+        let ind = document.getElementsByTagName("li")
+        console.log(ind[2])
+
+        let indd = document.querySelector("li")
+        console.log(indd)
 
     </script>
 </body>
