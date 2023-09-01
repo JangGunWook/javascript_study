@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #upper{
+
+            height:400px;
+            background-color: aqua;
+        }
+
+        #main{
+            position: relative;
+            background-color: yellow;
+        }
+
+        img{
+            position : absolute;
+            left: 30%;
+        }
+    </style>
+</head>
+<body>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <div id="upper"></div>
+    <div id="main">
+        <img src="https://images.samsung.com/kdp/goods/2023/07/12/c7fc047b-fe7f-44ab-ad8a-7105b4f35abc.png?$PD_GALLERY_L_PNG$" alt="">
+    </div>
+    
+
+    <SCript>
+
+        let meta={
+            "x" : 0,
+            "y" : 0
+        }
+
+        $("body").on("keydown",function(event){
+            console.log(event.key)
+            console.log(event.keycode)
+            if(event.key== "ArrowRight"){
+                meta.x +=100;
+                //에니메이션 효과 right로 갈때
+                $("img").animate({
+                    "left" : meta.x
+                },500)
+                $("img").css("left",`+=100px`)
+            }else if(event.key== "ArrowLeft"){
+                meta.x -=100;
+                $("img").css("left",`${meta.x}px`)
+            }else if(event.key== "ArrowDown"){
+                meta.y +=100;
+                $("img").css("top",`${meta.y}px`)
+            }else{
+                meta.y -=100;
+                $("img").css("top",`${meta.y}px`)
+            }
+
+            
+        })
+
+        /*
+        1. 제이쿼리 가져오기
+        2. 방향키를 클릭할때마다
+        3. 캐릭터가 그방향을 ㅗ움직이게
+
+        ** 위치속성**
+        -   static(기본값)
+
+        위치속성 활성화 (이동시킬 수 있는 상태)
+        - relative(본인위치 기준으로 이동)
+        - absolute(position이 static이 아닌 부모기준,
+                   만약에 부모가 static이 아니거나, 부모가 없다면
+                   body 태그를 기준으로 이동)
+        - fixed
+
+        어떻게 이동하지?
+        1. 위치속성 활성화를 켜주기
+        2. top/ left/ bottom/ right 스타일속성으로 이동시키기
+        */
+    </SCript>
+</body>
+</html>

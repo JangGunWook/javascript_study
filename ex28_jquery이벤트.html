@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <h1>에니메이션 잘 되나~</h1>
+    
+    <script>
+        // 애니메이션 효과를 활용하기
+        // h1태그에 마우스를 올렸을때 이벤트 처리
+
+        $('h1').on('mouseover',function(){
+            // .animate({바꾸고 싶은 css속성값},지속시간)
+            $(this).animate({
+                'font-size' : '20px'
+            },500,'swing')
+        })
+
+    </script>
+</body>
+</html>

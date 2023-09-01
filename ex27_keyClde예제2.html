@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>키보드로 이미지 움직이기</title>
+<style>
+  #container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+  }
+  #player {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+</style>
+</head>
+<body>
+<div>
+  <img id="player" src="https://i.namu.wiki/i/PEANd8OW0rdr4v7om19QFZWnmzJLO6r3jRXcrGum3ftDUAyuFoUYqHa4ReDVJvwfaSh_1Y-Y4u3viBUI55knjQ.webp" alt="플레이어 이미지">
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $(document).keydown(function(e) {
+      var player = $('#player');
+      var stepSize = 10; // 움직임 크기를 조절하세요.
+      var currentPosition = player.position();
+      
+      switch(e.keyCode) {
+        case "37": // 왼쪽 화살표
+          player.css('left', currentPosition.left - stepSize);
+          break;
+        case "38": // 위쪽 화살표
+          player.css('top', currentPosition.top - stepSize);
+          break;
+        case "39": // 오른쪽 화살표
+          player.css('left', currentPosition.left + stepSize);
+          break;
+        case "40": // 아래쪽 화살표
+          player.css('top', currentPosition.top + stepSize);
+          break;
+      }
+    });
+  });
+</script>
+</body>
+</html>
